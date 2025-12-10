@@ -1,0 +1,13 @@
+[project]
+name = "password_gen"
+version = "0.1.0"
+description = "A simple Python password generator."
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "pyperclip>=1.8.2"
+]
+
+[project.scripts]
+passwordgen = "password_gen.main:main"
