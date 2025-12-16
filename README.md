@@ -1,4 +1,8 @@
-# 🔐 Password Generator
+# Password Generator
+
+![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
 
 A secure, feature-rich command-line password generator with validation, strength analysis, and logging capabilities.
 
