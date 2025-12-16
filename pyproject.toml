@@ -13,4 +13,4 @@ passwordgen = "password_gen.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["password_gen*"]
+include = ["password_gen*", "logging_config*"] 

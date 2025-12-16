@@ -3,12 +3,11 @@ Main program for password generator. Interactive with CLI.
 """
 
 import sys
-import logging
 from typing import Optional
 from .generator import generate_password
 from .strength import assess_password
 from . import utils
-from .logging_config import setup_logging
+from logging_config import setup_logging, get_logger
 from .validators import PasswordValidator
 
 # Clipboard handling
@@ -61,7 +60,7 @@ def prompt_options():
 
 
 setup_logging()
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 def main():
@@ -115,7 +114,7 @@ def main():
                 logger.error(f"Error generating password: {e}")
 
         elif choice == "2":
-            n = utils.ask_int("Number of passwords to generate: ", min_value=1, default=5)
+            n = utils.ask_int("Number of passwords to generate: ", min_value=1,max_value= 100 ,default=5)
             length = utils.ask_int("Length of each password (default 16): ", min_value=1, default=16)
             try:
                 use_upper, use_lower, use_digits, use_symbols = prompt_options()
